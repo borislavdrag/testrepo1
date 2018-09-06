@@ -8,4 +8,4 @@ soup = BeautifulSoup(response.text, 'lxml')
 tags = soup.body.find('table', class_='infobox biota').find_next_sibling('p').find_all('a')
 new_wikis = [tag['href'] for tag in tags if tag.parent.name != 'sup']
 words = [tag.text for tag in tags if tag.parent.name != 'sup']
-print(words, new_wikis)
+print(words)
