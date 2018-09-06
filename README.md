@@ -1,3 +1,3 @@
-# How to use my program #
+# Wikiscrape 0.1 #
 
-There will be instructions at some point
+Wikiscrape aims to provide a tool for curious learners.
