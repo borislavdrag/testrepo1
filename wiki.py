@@ -23,8 +23,8 @@ class Node:
         soup = BeautifulSoup(response.text, 'lxml')
 
         tags = soup.body.find('div', class_='mw-parser-output').find('p', class_=None, recursive=False).find_all('a')
-        self.subnodes = [Node(tag['href'], self.depth + 1) for tag in tags if tag.parent.name == 'p']
-        self.words = [tag.text.lower() for tag in tags if tag.parent.name == 'p']
+        self.words, self.subnodes = zip(*[(tag.text.lower(), Node(tag['href'], self.depth + 1)) for tag in tags if tag.parent.name == 'p'])
+        # self.words = [tag.text.lower() for tag in tags if tag.parent.name == 'p']
         print(self.words)
 
 
