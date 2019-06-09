@@ -4,3 +4,4 @@
 2. Connect the graph dynamically
 3. Make the graph prettier
 4. Make the graph interactive
+5. Have fun
